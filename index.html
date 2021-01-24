@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./style.css' rel='stylesheet' type='text/css'>
+
+    <title>Document</title>
+</head>
+<body>
+    <section class='head'>
+        <h1>This page generates rumi quotes....</h1>
+    </section>
+
+    <section>
+        <img src='./download.jpg'>
+    </section>
+
+    <section class ='select'>
+        <button class='button' onclick="arrpull()">Click me</button>
+        <button class='button1' onclick="arrdel()">Delete Quote</button>
+    </section>
+
+    
+</body>
+<script>
+
+const arr = [
+'Don’t grieve. Anything you lose comes round in another form.',
+
+'Stop acting so small. You are the universe in ecstatic motion.',
+
+'Out beyond ideas of wrongdoing and rightdoing there is a field. I\'ll meet you there. When the soul lies down in that grass the world is too full to talk about.',
+
+'Let the waters settle and you will see the moon and the stars mirrored in your own being.',
+
+'Be melting snow. Wash yourself of yourself.',
+
+'The wound is the place where the Light enters you.',
+
+'Only from the heart can you touch the sky.',
+
+'Lovers don\'t finally meet somewhere. They\'re in each other all along.',
+
+'Sell your cleverness and buy bewilderment.',
+
+'Why do you stay in prison when the door is so wide open?'];
+
+
+
+function arrpull(){
+   
+    let x = arr[Math.floor(Math.random() * arr.length)];
+    let xr = document.createElement('p');
+    xr.id = 'rumi';
+    xr.innerHTML = x;
+    xr.style.color = 'white';
+    xr.style.fontSize = '20px';
+    xr.style.alignContent = 'center';
+    xr.style.display = 'block';
+    xr.style.textAlign = 'center';
+    document.body.appendChild(xr);
+
+}
+
+function arrdel(){
+    let x = document.getElementById('rumi');
+    document.body.removeChild(x);
+}
+</script>
+</html>
